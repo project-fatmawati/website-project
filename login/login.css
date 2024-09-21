@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --warna-premier: #229799;
+    --warna-sekunder: #f5f5f5;
+    --warna-putih2 : #ffffff;
+    --warna-tersier: #48cfcb;
+    --warna-button: #427898;
+    --warna-text: #000000;
+    --warana-kuning:#f5bd41;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--warna-putih2);
+}
+
+/* Tambahan styling untuk header */
+/* Header Styling */
+header {
+  background-color: var(--warna-putih2);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo img {
+  margin-left: 1rem;
+  height: 3rem;
+}
+
+
+
+/* .form-container {
+  margin-top: 6.25rem; Ensure the form is positioned below the fixed header
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 6.25rem);
+} */
+
+.form-container {
+  margin-top: 10rem; /* Adjust space below the header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-bottom: 3rem;
+}
+
+.form-content {
+  background-color: var(--warna-putih2);
+  padding: 2rem;
+  box-shadow: 0 2px .6rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 25rem;
+}
+
+/* Styling for the Form Logo */
+.form-logo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-logo img {
+  width: 4rem; /* Adjust the size of the logo here */
+  height: auto;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--warna-text);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.separator {
+  text-align: center;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+/* .separator::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--warana-kuning);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+} */
+
+input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--warna-sekunder);
+  border-radius: 1rem;
+  font-size: .8rem;
+}
+
+/* Checkbox and Text Horizontal Alignment */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.remember-forgot label {
+  display: flex;
+  align-items: baseline;
+  font-size: .8rem;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+}
+
+.remember-forgot input[type="checkbox"] {
+  margin-right: .5rem;
+  transform: scale(1.1); /* Skala untuk menyamakan ukuran dengan teks */
+}
+
+.remember-forgot a {
+  font-size: .9rem;
+  color: var(--warna-premier);
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  /* color: var(--warna-premier); */
+  text-decoration: underline;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  font-size: .8rem;
+  margin-bottom: .5rem; /* Add some space between checkboxes */
+}
+
+.remember-forgot label {
+  display: flex;
+  align-items: baseline;
+  font-size: .8rem;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+}
+
+
+/* Styling untuk elemen input-checkbox */
+.input-checkbox {
+  margin-bottom: 1rem; /* Spasi bawah */
+}
+
+.input-group-text {
+  display: flex;
+  align-items: center; /* Menyelaraskan checkbox dan teks secara vertikal */
+  gap: 0.5rem; /* Spasi antara checkbox dan teks */
+}
+
+.form-check-input {
+  width: 1rem; /* Ukuran checkbox */
+  /* height: rem; Ukuran checkbox */
+  margin: 0; /* Menghapus margin default pada checkbox */
+}
+
+.syarat, .subscription {
+  font-size: 0.875rem; /* Ukuran font */
+}
+
+.syarat a, .subscription a {
+  color: var(--warna-premier); /* Warna link */
+  text-decoration: none; /* Menghapus garis bawah pada link */
+}
+
+.syarat a:hover, .subscription a:hover {
+  text-decoration: underline; /* Garis bawah saat hover */
+  /* color: var(--warna-premier); */
+}
+
+button.login-btn,
+button.signup-btn {
+  background-color: var(--warna-premier);
+  color: var(--warna-putih2);
+  padding: .625rem 1.25rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color .5s;
+}
+
+button.login-btn:hover,
+button.signup-btn:hover {
+  background-color: var(--warna-button);
+  color: var(--warna-putih2);
+  font-weight: bold;
+}
+
+.signup-link,
+.login-link {
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+.signup-link a,
+.login-link a {
+  color: var(--warna-premier);
+  text-decoration: none;
+}
+
+.signup-link a:hover,
+.login-link a:hover {
+  text-decoration: underline;
+}
+

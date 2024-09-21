@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --warna-premier: #229799;
+    --warna-sekunder: #f5f5f5;
+    --warna-putih2 : #ffffff;
+    --warna-tersier: #48cfcb;
+    --warna-button: #427898;
+    --warna-text: #000000;
+    --warana-kuning:#f5bd41;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: whitesmoke;
+    color: rgba(0, 0, 0, 0.685);
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    font-size: 3.5rem;
+    letter-spacing: -0.4;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size:2.5rem;
+    line-height:1.2;
+}
+
+.btn {
+    background-color: var(--warna-premier);
+    color:black;
+    font-size: 1rem;
+    border-radius: 10px;
+    font-weight:500;
+}
+
+.btn:hover {
+    background-color: var(--warna-text);
+    color: var(--warna-tersier)
+}
+
+#image-footer {
+   width: 40%;
+}
+
+ nav {
+    position:fixed;
+    top: 0;
+    margin: 2px;
+    padding: 5px;
+    z-index: 1000;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.808) !important;
+}
+
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+    color: #427898 !important;
+}
+
+.logo-img {
+    margin-left: 20px;
+    height: 50px;
+    width: auto;
+    
+}
+
+.dropdown-menu {
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+
+.dropdown-item:hover {
+    color: #427898 !important;
+}
+
+.nav-link {
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.btn-outline-primary {
+    color: #427898;
+    border-color: #427898;
+}
+
+.btn-outline-primary:hover {
+    background-color: #427898;
+    color: whitesmoke;
+}
+
+.btn-outline-primary {
+    margin-right: 20px;
+    width: 100px;
+    padding: 10px 20px;
+    background-color: #427898;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    transition: #427898 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #48cfcb;
+    color: beige;
+}
+
+.hidden {
+    display: none;
+}
+.logged-in {
+    background-color: red;
+    color: white;
+  }
+
+/*SECTION HERO*/
+
+.hero-section {
+    background-color: var(--warna-premier);
+}
+
+.hero-section p {
+    font-size:1.5rem;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    margin-top: 20px;
+}
+
+#btn-banner{
+    width: 150px;
+    padding: 10px 10px;
+    margin-top: 50px;;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: var(--warana-kuning);
+    color: var(--warna-text);
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    transition: #427898 0.3s ease;
+}
+
+#btn-banner:hover {
+    background-color: var(--warna-text);
+    color: var(--warna-sekunder)
+}
+ 
+.banner-text {
+   
+  animation: animate__backInUp;
+  animation-duration: 5s;  
+}
+
+/*SECTION CARD*/
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#btn-katalog{
+    width: 280px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: var(--warna-tersier);
+    color: var(--warna-text);
+    border: none;
+    text-align: center;
+    transition: var(--warna-text) 0.3s ease;
+}
+
+#btn-katalog:hover {
+    background-color: var(--warana-kuning);
+    color: var(--warna-text)
+}
+
+.card {
+border-radius: 25px;
+background-color: var(--warna-putih2);
+margin: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+color: #333;
+border: 1px solid #ddd;
+}
+
+.card:hover {
+    background-color: var(--warna-sekunder);
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.card-body h5{
+    font-size: 25px;;
+}
+
+#btn-product{
+    padding: 7px;
+    font-size: 15px;
+    background-color: #f5bd41;
+    color: var(--warna-text);
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    transition: #f5bd41 0.3s ease;
+}
+
+#btn-product:hover {
+    background-color: var(--warna-tersier);
+    color: var(--warna-text)
+}
+
+/*SECTION FAQ*/
+
+.accordion {
+    padding: 5rem;
+
+}
+.accordion-button {
+    background-color: var(--warna-putih2);
+    font-size: 20px;
+    color: var(--warna-premier)
+}
+
+
+/*SECTION NEWSLETTER*/
+
+#btn-subscribe{
+    padding: 7px;
+    font-size: 20px;
+    background-color: var(--warna-tersier);
+    color: var(--warna-text);
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    transition: var(--warna-tersier) 0.3s ease;
+}
+
+#btn-subscribe:hover {
+    background-color: var(--warana-kuning);
+    color: var(--warna-text)
+}
+
+
+/*SECTION CONTACT*/
+
+.sitelink a {
+    padding: 2px;
+}
+.sitelink-text:hover {
+    color:#f5bd41;
+}
+
+/*SECTION FOOTER*/
+ion-icon {
+    font-size:30px;
+    padding:10px;
+}
+.logo-facebook{
+    color:#1876f2;
+}
+
+.logo-instagram{
+    color:#fd0779;
+}
+
+.logo-youtube{
+    color:#fe0000;
+}
+
+.copyright {
+    background-color: var(--warna-premier);
+    padding: 20px;
+}
+
+
+
+/*RESPONSIVE*/
+
+@media (max-width:1000px) {
+    nav .navbar-nav {
+        background-color: var(--warna-sekunder);
+        padding: 2rem;
+        gap: 5px;
+
+    }
+    .hero-section {
+        text-align:center;
+
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-bottom:1rem;
+    }
+
+}
+
+
+@media (max-width:1400px) {
+    h1{
+        font-size: 3rem;
+        letter-spacing: -0.4;
+        line-height: 1.2;   
+    }
+}
+
+@media (max-width:750px) {
+
+    .card-katalog {
+        align-content: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+@media (max-width:600px) {
+    .hero-section p {
+        font-size:18px;
+    }
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        .product p {
+            font-size: 20px;
+        }
+        .faq p {
+            font-size: 20px;
+        }
+        .newsletter p {
+            font-size: 20px;
+        }
+        #newsletter-form{
+            padding-top: 30px;
+        }
+
+        .about-text {
+            font-size: 100px;;
+        }
+
+        .contact p {
+            font-size: 5px;
+        }
+    }
+
+
+  

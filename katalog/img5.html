@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../katalog/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../katalog/asset/Logo.png" alt="Logo TukarBaju" class="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="../homepage/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="../homepage/about.html" id="about-navbar">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-black" href="#" id="tukarBajuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Informasi
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="tukarBajuDropdown">
+                            <li><a class="dropdown-item text-black" href="#">Cara Tukaran</a></li>
+                            <li><a class="dropdown-item text-black " href="#" id="member-navbar">Join Member</a></li>
+                            <li><a class="dropdown-item text-black" href="#">Event</a></li>
+                            <li><a class="dropdown-item text-black" href="#">Donasi</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="../homepage/about.html" id="about-navbar"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Detail Produk</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container product-detail">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img id="mainImage" src="../katalog/img/Kemeja/043863f8-812b-409a-b35a-adfd3f63d12e-removebg-preview.png" alt="img/Kemeja/043863f8-812b-409a-b35a-adfd3f63d12e-removebg-preview.png">
+                </div>
+                <div class="thumbnails">
+                    <img src="../katalog/img/Kemeja/043863f8-812b-409a-b35a-adfd3f63d12e.jpg" alt="Thumbnail 1" class="thumbnail" data-src="img/Kemeja/043863f8-812b-409a-b35a-adfd3f63d12e.jpg">
+                    <img src="../katalog/img/Kemeja/2f61a680-076c-4ad0-8742-37fbf3b5688d.jpg" alt="Thumbnail 2" class="thumbnail" data-src="img/Kemeja/2f61a680-076c-4ad0-8742-37fbf3b5688d.jpg">
+                    <img src="../katalog/img/Kemeja/f99caff9-398d-45d0-8f3b-7ed4dceaccac.jpg" alt="Thumbnail 3" class="thumbnail" data-src="img/Kemeja/f99caff9-398d-45d0-8f3b-7ed4dceaccac.jpg">
+                </div>
+            </div>
+            <div class="product-info">
+                <h2>Dior Women's Cream Blouse </h2>
+                <p class="city">Jakarta</p>
+                <p class="description">
+                    <strong>Kondisi:</strong> Kondisi Sangat Baik<br>
+                    <strong>Ukuran:</strong> S<br>
+                    <strong>Warna:</strong> Cream Bermotifn<br>
+                    <strong>Fitur:</strong> Nyaman, Tahan Lama
+                </p>
+                <div class="favorites">
+                    <button class="favorite-button" onclick="toggleFavorite()">
+                        <i class="favorite-icon">&#9733;</i> Tertarik
+                    </button>
+                    <span id="favoriteCount">0</span> orang tertarik
+                </div>
+                <div class="history">
+                    <h3>Deskripsi Pakaian</h3>
+                    <p>Dior Women's Cream Blouse adalah pernyataan gaya yang canggih dan timeless, menambahkan sentuhan kemewahan dan keanggunan pada setiap outfit Anda.</p>
+                    <a href="#popup" class="btn">Hubungi Pemilik</a>
+                </div>
+            </div>
+        </div>
+        <div class="container review-section">
+            <h3>Ulasan</h3>
+            <div class="review-list">
+                <!-- Existing reviews will appear here -->
+            </div>
+            <div class="add-review">
+                <h4>Tambahkan Ulasan Anda</h4>
+                <input type="text" id="reviewerName" placeholder="Nama Anda" required>
+                <textarea id="reviewText" placeholder="Tulis ulasan Anda di sini..." required></textarea>
+                <div class="rating">
+                    <span class="star" data-value="5">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="1">&#9733;</span>
+                </div>
+                <button id="submitReview">Kirim Ulasan</button>
+            </div>
+        </div>
+    </main>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h1>Informasi Pemilik Pakaian</h1>
+                <a href="#" class="popup-close">&times;</a>
+            </div>
+            <div class="popup-text">
+                <p>Nama: Nadia Utami</p>
+                <p>Alamat:   Jl. Cempaka Putih No. 33, Jakarta Pusat</p>
+                <p>No Hp: 0852-1234-5678</p>
+                <p>Email:  Nadiautami900@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    <script src="../katalog/index.js"></script>
+     <!-- Bootstrap JS -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Bootsrap CSS -->  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+<!--CSS & Javascript-->
+    <link rel="stylesheet" type="text/css" href="../homepage/homepage.css">
+    <script src="../homepage/homepage.js" defer ></script>
+
+<!--AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>BarterStyle</title>
+
+</head>
+<body>
+
+ <!--SECTION NAVBAR-->
+ 
+<header class="bg-header">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="../homepage/index.html">
+            <img src="../homepage/Asset homepage/Logo-nav.png" alt="Logo TukarBaju" class="logo-img">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto gap-3">
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="about.html" id="about-navbar">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-black" href="#" id="tukarBajuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Informasi
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="tukarBajuDropdown">
+                        <li><a class="dropdown-item text-black" href="#">Cara Tukaran</a></li>
+                        <li><a class="dropdown-item text-black " href="#" id="member-navbar">Join Member</a></li>
+                        <li><a class="dropdown-item text-black" href="#">Event</a></li>
+                        <li><a class="dropdown-item text-black" href="#">Donasi</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="../katalog/Katalog.html">Katalog Pakaian</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item" id="loginNavItem">
+                    <a class="login-navbar btn-outline-primary" href="../login/login.html" id="loginNavbar">Login</a>
+                </li>
+                <li class="nav-item" id="registerNavItem">
+                    <a class="register-navbar btn-outline-primary" href="../login/daftar.html" id="registerNavbar">Register</a>
+                </li>
+                <li class="nav-item" id="profileNavItem" style="display:none">
+                    <button id="profileButton" class="btn btn-outline-primary">
+                        <img id="userPhoto" src="../homepage/Asset homepage/photo_catt.png" alt="User Photo" style="width: 30px; height: 30px; border-radius: 50%;"/>
+                        <span id="userName"></span>
+                    </button>
+                    <div id="profileDropdown" class="profile-dropdown" style="display:none;">
+                        <a class="dropdown-item" href="../Profile User/profile-user.html">Profil</a>
+                        <a class="dropdown-item" href="../homepage/homepage.html" id="logout">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</header>
+
+<!--SECTION BANNER/HERO-->
+  <section class="hero-section pb-3 py-5">
+  <div class="container pb-5 py-5">
+    <div class="row ">
+        <div class=" banner-text col-12 col-lg-7" data-aos="fade-up" data-aos-duration="2000" >
+          <h1 class="text-white fw-bold" id="hero-user">Rajanya Barter Pakaian, <br> Siap Tukaran.</h1>
+          <p class="text-black pt-4">“Jadilah bagian dari Gerakan Fashion Berkelanjutan. Tukarkan Pakaianmu, Perbarui Gaya, dan Selamatkan Bumi.”</p>
+          <button type="button" id="btn-banner">Mulai Tukar</button>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="d-flex justify-content-md-center">
+          <img src="../homepage/Asset homepage/hero-image.png" class="hero-img" style="width: 100%;" alt="">
+          </div>
+        </div>
+    </div>
+  </div>
+  </section>
+
+<!--SECTION PRODUCTS-->
+    <section class="product pb-3 py-5">
+        <div class="container text-center py-5">
+            <div class="row">
+            <h2 class="text-dark fw-bold text-black pb-2"> Tukaran Pakaian Yuk. </h2>
+            <p class="pb-5 h4">"Ambil Bagian dari Gerakan Sustainability Fashion dengan Menukarkan Pakaian Anda Sekarang"</p>
+        </div>
+        <div class="container py-4">
+            <div class="container text-center">
+                <div class="row justify-content-center" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="card-katalog col">
+                        <div class="card" style="width: 20rem;">
+                            <img src="../homepage/Asset homepage/blouse cream.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Women's Cream Blouse</h5>
+                                    <p class="card-text" style="font-size: 15px;">Location : Jakarta</p>
+                                    <a href="../katalog/Katalog.html" id="btn-product">Lihat Detail</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card-katalog col">
+                        <div class="card" style="width: 20rem;">
+                            <img src="../homepage/Asset homepage/hoodie.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Champion Burgundy Hoody</h5>
+                                    <p class="card-text" style="font-size: 15px;">Location : Jakarta</p>
+                                    <a href="../katalog/img4.html" id="btn-product">Lihat Detail</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card-katalog col">
+                        <div class="card" style="width: 20rem;">
+                            <img src="../homepage/Asset homepage/rok.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Women's Yellow Skirt Crinkle</h5>
+                                    <p class="card-text" style="font-size: 15px;">Location : Jakarta</p>
+                                    <a href="../katalog/img6.html" id="btn-product">Lihat Detail</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card-katalog col">
+                        <div class="card" style="width: 20rem;">
+                            <img src="../homepage/Asset homepage/celana.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Women's Brown Culotte</h5>
+                                    <p class="card-text" style="font-size: 15px;">Location : Jakarta</p>
+                                    <a href="../katalog/img3.html" id="btn-product">Lihat Detail</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card-katalog col">
+                        <div class="card" mt-2 style="width: 20rem;">
+                            <img src="../homepage/Asset homepage/Dior blouse.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dior Women's Cream Blouse</h5>
+                                    <p class="card-text" style="font-size: 15px;">Location : Jakarta</p>
+                                    <a href="../katalog/img5.html" id="btn-product">Lihat Detail</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="card-katalog col">
+                        <div class="card" style="width: 20rem;">
+                            <img src="../homepage/Asset homepage/cardigan.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Uniqlo Women's Black Cardigan</h5>
+                                    <p class="card-text" style="font-size: 15px;">Location : Jakarta</p>
+                                    <a href="../katalog/img2.html" id="btn-product">Lihat Detail</a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <div class="row">
+                <div class="col text-center">
+                    <button onclick="location.href='/katalog.html'" type="button" id="btn-katalog">Lihat Katalog BarterStyle</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--SECTION FAQ-->
+    <section class="faq pb-5 py-5">
+        <div class="container">
+            <div class="row text-center">
+                <h2 class="text-black fw-bold"> FAQ </h2>
+                <p class="h4">"Cari tahu BarterStyle Disini!"</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col"> 
+                    <div class="accordion" id="accordionExample" data-aos="fade-up" data-aos-duration="2000">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Apa itu BarterStyle? </button>
+                            </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"> 
+                                    <div class="accordion-body"> BarterStyle adalah Sebuah platform yang akan mempertemukan orang-orang yang ingin bertukar pakaian secara online demi mewujudkan Sustainability fashion.</div>
+                                </div>
+                        </div>
+                        <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Bagaimana Cara Saya Bergabung BarterStyle?</button>
+                                </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample"> 
+                                        <div class="accordion-body"> Cara bergabung di BarterStyle Anda cukup melakukan registrasi dan login di website resmi kami.</div>
+                                    </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Apa Keuntungan menjadi Member BarterStyle?</button>
+                            </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample"> 
+                                    <div class="accordion-body"> Anda dapat terhubung dengan orang-orang yang ingin saling bertukar pakaian dan melihat pakaiannya secara online. Selain itu, Anda bisa mendapatkan informasi update seputar event tukar pakaian secara offline.</div>
+                                </div>
+                        </div> 
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Apa Saja Jenis Pakaian yang Bisa Dibarter?</button>
+                            </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample"> 
+                                    <div class="accordion-body"> Jenis pakaian yang bisa ditukarkan diantaranya : Celana Jeans, Kemeja, Kaos, Jaz, Rompi, Blazer, Hoodie, Outer, Rok, Kebaya, dan lain- lain dengan kategori pakaian yang masih layak pakai dan tingkat kecacatannya maksimal 20% dari kondisi baru. </div>
+                                </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">Bagaimana Cara Saya Bisa Join Event di BarterStyle?</button>
+                            </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample"> 
+                                    <div class="accordion-body">Harus mendaftar dulu sebagai member di BarterStyle.</div>
+                                </div>
+                        </div>              
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+<!--SECTION NEWSLETTER-->
+    <section class="newsletter py-5">
+        <div class="container text-center mb-5 mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="newsletter-text">
+                        <h2 class=" text-black fw-bold mb-4">Berlangganan Newsletter</h2>
+                        <p class="mb-4 h4">Dapatkan update terbaru dan penawaran menarik langsung ke email Anda.</p>
+                            <form id="newsletter-form">
+                                <div class="input-group mb-3">
+                                    <input type="email" id="email" class="form-control" placeholder="Masukkan alamat email Anda" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <button id="btn-subscribe" type="button" onclick=validateEmail()>Subscribe</button>
+                                </div>
+                            </form>
+                            <div id="message"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <hr>
+
+<!--SECTION CONTACT-->
+    <section class="contact py-5">
+        <div class="container" id="contact">
+            <div class="row">
+                <div class="col-12 col-lg-6 mt-2">
+                    <img  id="image-footer" src="../homepage/Asset homepage/Logo-nav.png">
+                    <p class="text-black pt-3 pe-10" style="font-size:15px;">Sebuah platform yang mengajak Anda untuk berpartisipasi dalam revolusi fashion berkelanjutan. Dengan BarterStyle, Anda dapat memperpanjang umur pakai pakaian Anda, mengurangi limbah fashion, dan menemukan gaya baru yang unik.</p>
+                    <a href="mailto:info@Barterstyle.com" style="font-size:15px;">info@barterstyle.com</a>
+                </div>
+                <div class=" col-12 col-lg-3 mt-2 py-3">
+                    <h4 class="fw-bold pb-3 text-black ">Site Link</h4>
+                        <div class="sitelink d-flex flex-column text-black">
+                            <a href="../homepage/homepage.html" class="sitelink text-black" style="font-size:medium;"> Home</a>
+                            <a href="../homepage/about.html" class="sitelink-text text-black" style="font-size: medium;"> About</a>
+                            <a href="../login/login.html" class="sitelink-text text-black" style="font-size: medium;"> Event</a>
+                            <a href="../login/login.html" class="sitelink-text text-black" style="font-size: medium;"> Donasi</a>
+                        </div>
+                </div>
+                <div class="col-12 col-lg-3 mt-2 py-3 ">
+                    <h4 class="fw-bold text-black">Sosial Media</h4>
+                        <div class="d-flex">
+                            <a href="#" class="logo-facebook"> <ion-icon name="logo-facebook" class="icon" ></ion-icon> </a>
+                            <a href="#" class="logo-instagram"> <ion-icon name="logo-instagram" class="icon"></ion-icon></a>
+                            <a href="#" class="logo-youtube"> <ion-icon name="logo-youtube" class="icon"></ion-icon></a>
+                        </div>
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <footer>
+        <div class="text-center">
+            <p class="copyright text-black" style="font-size: 18px;">&copy; BarterStyle 2024 all right reserved by Fatmawati</p>
+        </div>
+    </footer>
+
+<!--AOS-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+<!--ICON-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!--BOOSTRAP JS-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
