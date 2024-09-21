@@ -1,0 +1,134 @@
+
+/* Reset margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+nav {
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding: 10px;
+    z-index: 1000;
+    background-color: #f8f9fa; /* Warna latar belakang yang lebih terang */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.7) !important; /* Warna teks yang lebih halus */
+}
+
+.navbar-brand:hover, .navbar-nav .nav-link:hover {
+    color: #0056b3 !important; /* Warna hover yang lebih cerah */
+}
+
+.logo-img {
+    margin-left: 20px;
+    height: 50px;
+    width: auto;
+}
+
+.dropdown-menu {
+    background-color: #f8f9fa; /* Warna latar belakang dropdown */
+    border-radius: 5px;
+}
+
+.dropdown-item:hover {
+    color: #0056b3 !important; /* Warna hover dropdown item */
+}
+
+.nav-link {
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.btn-outline-primary {
+    color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+/* Katalog layout */
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Memperlebar item */
+    gap: 20px; /* Mengurangi jarak antara item */
+    padding: 20px;
+    max-width: 1200px; /* Lebar maksimum untuk menjaga tata letak */
+    margin: 0 auto; /* Memusatkan grid */
+}
+
+/* Style untuk setiap item */
+.item {
+    background-color: #ffffff;
+    border: 1px solid #ddd; /* Menambahkan border tipis */
+    border-radius: 10px; /* Membuat sudut lebih membulat */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Mengurangi bayangan */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.item:hover {
+    transform: translateY(-8px); /* Mengurangi gerakan saat hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Gambar produk */
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Membuat sudut gambar lebih membulat */
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+/* Judul produk */
+.item h2 {
+    font-size: 2.5rem; /* Mengurangi ukuran font */
+    margin-bottom: 8px;
+    color: #0000; /* Warna teks yang lebih gelap */
+    text-transform: capitalize;
+}
+
+/* Kota */
+.item p {
+    font-size: 0.9rem; /* Mengurangi ukuran font */
+    color: black; /* Warna teks yang lebih lembut */
+    margin-bottom: 15px; /* Mengurangi jarak antara elemen */
+}
+
+/* Tombol Detail Produk */
+.detail-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #427898; /* Warna latar belakang tombol */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.detail-btn:hover {
+    background-color: #004494; /* Warna latar belakang tombol saat hover */
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    .item h2 {
+        font-size: 1.4rem;
+    }
+    .detail-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
